@@ -1,41 +1,28 @@
-Readme Login Auth API
+<h1 align="center">Login Auth API</h1>
 
-Java 17
-Spring Boot 3.2.5
+<h4 align="center">Java 17 / Spring Boot 3.2.5 / Maven</h4>
 
-Maven dependencies
-	Spring Web
-	Spring Boot DevTools
-	Spring Data JPA
-	Spring Security
-	Lombok
-	H2 Database
-	JWT
+Utilize o [Spring initializr](https://start.spring.io/) para pré-configurar o projeto.
+* Na seção *'Project'* escolha *'Maven'*.
+* Na seção *'Language' escolha 'Java'*.
+* Na seção *'Spring Boot'* escolha *'3.2.5'*.
+* Em *'Project Metadata'* no campo *'Artifact'* digite nome do projeto.
+* Em *'Description'* escreva uma descrição para o seu projeto.
+* Em *'Packaging'* marque a opção *'Jar'*.
+* Em *'Java'* marque a opção *'17'*.
+<p>Clique em 'add dependencies' e adicione as seguintes dependências:</p>
 
-Como utilizar:
+* Spring Web
+* Spring Boot DevTools
+* Spring Data JPA
+* Spring Security
+* Lombok
 
-Para pré-configurar o projeto utilizei o Spring initializr através do link: https://start.spring.io/
-
-Na seção Project escolha Maven.
-Na seção Language escolha Java.
-Na seção Spring Boot escolha a versão 3.2.5.
-Em Project Metadata no campo Artifact escreva login-auth-api.
-Em Description escreva uma descrição para o seu projeto.
-Em packaging marque a opção Jar.
-Em Java escolha marque a opção 17.
-
-Clique em add dependencies e adicione as dependências:
-	Spring Web
-	Spring Boot DevTools
-	Spring Data JPA
-	Spring Security
-	Lombok
-
-Agora clique em generate e baixe o arquivo .zip no seu local de preferência.
+Agora clique em *'Generate'* e baixe o arquivo *.zip* no seu local de preferência.
 
 Importe a pasta extraída para o editor de sua preferência.
 
-Agora adicione as dependências do H2 e JWT no arquivo pom.xml
+Adicione as dependências do H2 e JWT no arquivo *pom.xml*
 
 		<dependency>
 			<groupId>com.h2database</groupId>
@@ -49,11 +36,9 @@ Agora adicione as dependências do H2 e JWT no arquivo pom.xml
 			<version>4.4.0</version>
 		</dependency>
 
-Agora em src/main/resources/application.properties abaixo da linha spring.application.name=NOME-ESCOLHIDO-POR-VOCE adicione as seguinte Configurações:
+Agora em *'src/main/resources/application.properties'* abaixo da linha '*spring.application.name*', adicione as seguinte configurações:
 
 		spring.datasource.url=jdbc:h2:mem:testdb
 		spring.datasource.driver-class-name=org.h2.Driver
 		spring.datasource.username=sa
 		spring.datasource.password=
-
-Aplicação pré-configurada.
